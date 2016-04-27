@@ -1,4 +1,7 @@
 
 svn merge --dry-run 'url'   #dry run merge	
 svn merge 'url'                 #For merge
-svn diff -r{2014-09-01}:{2014-10-01} --summarize "branch url" >output.txt  #files modified between two dates	
+svn diff -r{2014-09-01}:{2014-10-01} --summarize "branch url" >output.txt  #files modified between two dates	https://github.com/gampalalp/Basics/edit/Commands/General
+svn mkdir -m "Making a new dir." http://svn.red-bean.com/repos/newdir  #Create one directory in the repository
+svn mkdir newdir #Create a directory in your working copy
+svn log | sed -n '/username/,/-----$/ p'  #To find the checkins done by a particular user
