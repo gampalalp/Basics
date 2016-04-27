@@ -1,4 +1,1 @@
-nohup mvn -Pci -X >& build_`date +%m/%d/%Y` &
-nohup mvn -Pci -X  -DskipTests=true >& build_`date +%m/%d/%Y` &
-nohup mvn -Pci -X deploy >& build_`date +%m/%d/%Y` &
-nohup mvn -Pfortify-analysis -DskipTests=true -Dskip.sonar=true  -X >& build_`date +%m/%d/%Y` &
+
