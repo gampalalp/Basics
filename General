@@ -1,0 +1,35 @@
+IP Address:	
+Solaris	
+find ip address of the server u loggedin	    /usr/sbin/ifconfig -a
+find ip address 	                            /usr/sbin/nslookup "server name"
+
+Linux	
+find ip of the server u logged in	hostname -i or cat /etc/hosts
+------------
+Tarring	
+normal tarring	tar  -cvf output.tar sourefoldername
+gtar	/usr/sfw/bin/gtar cvf
+zipping	zip -r fortify-src.zip *
+	
+Untarring	
+normal	tar -xvf filename
+gtar	/usr/sfw/bin/gtar xvf
+	
+FIND	
+find a file	find . -name "filename"
+particular word in all files	find . -type f|xargs grep -i"word"
+	
+Soft link	ln -s 'source' linkname 
+	
+Disk Usage	
+	du -sh *
+	df -k .
+	du -sk *
+	du -h -s *(size of subdirectories in a directory)
+Memory Usage	
+	vmstat 1 10
+	
+Port	
+To know if a port is listening or free	[netstat -an|grep 'portnumber' |grep LISTEN ]
+	
+remote host is response	[ping -a "hostname" or "ipaddress"]
