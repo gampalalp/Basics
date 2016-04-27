@@ -1,0 +1,12 @@
+:se nu    #Set line number
+shift+d   #delete from cursor till end of line
+type no. of line u want to deelete then 'dd'    #delete "n" no. of lines 
+0         #go to beginning of a line
+$         #go to end of a line
+:0        #go to the beginning of the page
+:$        #go to end of a the page
+/'word'  ; hit n to find the next word    #To search a word
+:%s/'actualy_word'/'new_word'/g           #To replace a word with another word
+:%s/ctr+v+m//g                            #remove ^M charater
+dG                                        #delete all lines below cursor
+
