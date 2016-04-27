@@ -37,3 +37,10 @@ remote host is response	[ping -a "hostname" or "ipaddress"]
 export PATH=/usr/local/bin:$PATH
 Cat /dev/null > filename  #to empty a file
 dircmp -ds -w 100 "directory1" "directory2"	#compare two directories
+tail -100f "log file name" |grep ""
+tail -100f access.log | awk '{print $8}'
+cat filename | sort -u  #sorts and displays only unique
+fgrep -x -f file1 file2  #displays common thing in both files
+fgrep -v -f file1 file2 #displays the things in file2 which are not there in file2
+/opt/apps/java/jdk170_21/bin/keytool -list -v -keystore “JKS file”
+
