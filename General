@@ -33,3 +33,6 @@ Port
 To know if a port is listening or free	[netstat -an|grep 'portnumber' |grep LISTEN ]
 	
 remote host is response	[ping -a "hostname" or "ipaddress"]
+
+export PATH=/usr/local/bin:$PATH
+Cat /dev/null > filename  #to empty a file
