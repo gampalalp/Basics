@@ -1,1 +1,4 @@
 
+svn merge --dry-run 'url'   #dry run merge	
+svn merge 'url'                 #For merge
+svn diff -r{2014-09-01}:{2014-10-01} --summarize "branch url" >output.txt  #files modified between two dates	
