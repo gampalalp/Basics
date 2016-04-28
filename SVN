@@ -11,6 +11,8 @@ svn log -v  --stop-on-copy "url of the branch" #To know at which revision a bran
 
 svn --non-interactive --no-auth-cache --username u263152 --password 'Saibaba3' log --verbose --xml --revision 21280:21282 "svn branch url" (to find change log between two revisions)
 svn --non-interactive checkout --username u263152 --password '****' "SVN branchurl"
+svn --non-interactive --no-auth-cache --username u263152 --password 'Saibaba3' log --verbose --xml --revision 21537:21544 “branch url”|grep author|sort –u  [command will display  the unique users who made commits between two svn revisions]
+
 svn list -vR "SVN branchurl" |grep u263152|awk '{print $7}' – find the list of files changed by a user in a branch
 svn revert --depth infinity moneymovement #If you want to revert a whole directory of files
 
