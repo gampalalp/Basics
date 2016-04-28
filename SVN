@@ -1,20 +1,24 @@
 
 svn merge --dry-run 'url'   #dry run merge	
 svn merge 'url'                 #For merge
-svn diff -r{2014-09-01}:{2014-10-01} --summarize "branch url" >output.txt  #files modified between two dates	https://github.com/gampalalp/Basics/edit/Commands/General
+
+
 svn mkdir -m "Making a new dir." http://svn.red-bean.com/repos/newdir  #Create one directory in the repository
 svn mkdir newdir #Create a directory in your working copy
+
 svn log | sed -n '/username/,/-----$/ p'  #To find the checkins done by a particular user
-svn --non-interactive --no-auth-cache --username u263152 --password 'Saibaba3' log --verbose --xml --revision 21280:21282 "svn branch url" (to find change log between two revisions)
-svn revert --depth infinity moneymovement #If you want to revert a whole directory of files
 svn log -v  --stop-on-copy "url of the branch" #To know at which revision a branch is created
+
+svn --non-interactive --no-auth-cache --username u263152 --password 'Saibaba3' log --verbose --xml --revision 21280:21282 "svn branch url" (to find change log between two revisions)
+svn --non-interactive checkout --username u263152 --password '****' "SVN branchurl"
+svn list -vR "SVN branchurl" |grep u263152|awk '{print $7}' – find the list of files changed by a user in a branch
+svn revert --depth infinity moneymovement #If you want to revert a whole directory of files
+
 
 svn diff --summarize "SVN branch1url" "SVN branch2url" #Files changed between two branches)
 svn diff -r 9608:9669 --summarize "SVN branchurl"  #list of files modified between 2 versions)
 svn diff -r{2014-09-01}:{2014-10-01} --summarize "branch url"   #files modified between two dates	
 svn diff -r3878:5440  --stop-on-copy "SVN branchurl"
 
-svn --non-interactive checkout --username u263152 --password '****' "SVN branchurl"
 
-svn list -vR "SVN branchurl" |grep u263152|awk '{print $7}' – find the list of files changed by a user in a branch
 
