@@ -26,6 +26,7 @@ Disk Usage
 	df -k .
 	du -sk *
 	du -h -s *(size of subdirectories in a directory)
+	du -sh "foldername" -- give the size of a folder
 Memory Usage	
 	vmstat 1 10
 	
