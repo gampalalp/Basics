@@ -27,6 +27,10 @@ Disk Usage
 	du -sk *
 	du -h -s *(size of subdirectories in a directory)
 	du -sh "foldername" -- give the size of a folder
+	sf1-3haleqa2-idb-gd $ df -hk /logs
+Filesystem             size   used  avail capacity  Mounted on
+/dev/dsk/c0d1s0     118G    26G    91G    22%    /logs
+
 Memory Usage	
 	vmstat 1 10
 	
