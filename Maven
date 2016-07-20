@@ -4,3 +4,4 @@ nohup mvn -Pci -X  -DskipTests=true >& build_`date +%m%d%Y` &
 nohup mvn -Pci -X deploy >& build_`date +%m%d%Y` &
 nohup mvn -Pfortify-analysis -DskipTests=true -Dskip.sonar=true  -X >& build_`date +%m%d%Y` &
 mvn -Pfortify-analysis assembly:single -s /release/OBP/iebuild/.m2/artifactory_settings.xml [to run maven-assembly-plugin]
+mvn versions:update-properties -s /release/OBP/iebuild/.m2/artifactory_settings.xml [to run versions-maven-plugin]
