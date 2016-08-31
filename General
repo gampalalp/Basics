@@ -51,3 +51,7 @@ fgrep -v -f file1 file2 #displays the things in file2 which are not there in fil
 
 find . -type f -exec grep  -l tapapp_2015.02.0 {} + [find the file names which has particular word]
 find . -type f | xargs grep -c tapapp_2015.02.0 | grep -v ":0" [find the file names which has particular word]
+
+Cron job
+Run on 1st of every month adn deletes anything whic older than 6month
+0 0 1 * * /release/OBP/iebuild/.m2/*repository* -type f -mtime +180 -exec rm -rf {} \; >/dev/null 2>&1
