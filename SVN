@@ -21,6 +21,11 @@ svn diff --summarize "SVN branch1url" "SVN branch2url" #Files changed between tw
 svn diff -r 9608:9669 --summarize "SVN branchurl"  #list of files modified between 2 versions)
 svn diff -r{2014-09-01}:{2014-10-01} --summarize "branch url"   #files modified between two dates	
 svn diff -r3878:5440  --stop-on-copy "SVN branchurl"
+StorePassword for svn operations
+cd /home/u263152/.subversion
+Edit servers file with below configuration(Note:below lines should be uncommented and no space should be there before these)
+store-passwords = yes
+store-plaintext-passwords = yes
 
 
 
