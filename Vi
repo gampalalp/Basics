@@ -10,3 +10,5 @@ $         #go to end of a line
 :%s/ctr+v+m//g                            #remove ^M charater
 dG                                        #delete all lines below cursor
 
+find . -name pom.xml |xargs perl -i -p -e 's/<version>2016.02.0-SNAPSHOT<\/\version>/<version>2016.02.0STM_POC-SNAPSHOT<\/\version>/g;'
+
