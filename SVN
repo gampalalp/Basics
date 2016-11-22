@@ -26,6 +26,8 @@ cd /home/u263152/.subversion
 Edit servers file with below configuration(Note:below lines should be uncommented and no space should be there before these)
 store-passwords = yes
 store-plaintext-passwords = yes
+svn delete http://www-pcmdi.llnl.gov/svn/repository/cdat/branches/new-branch -m "Removing obsolete branch from the repository"
+
 
 
 
