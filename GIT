@@ -1,0 +1,18 @@
+Add ssh key(ssh-keygen -t rsa)
+ git clone git@github.wellsfargo.com:u263152/wibtp-payments.git
+ git remote -v ( to see the origins)
+ git remote add upstream git@github.wellsfargo.com:app-digital-channels-group/wibtp-payments.git (to add upstream)
+ git branch -a(to see all branches in repo)
+ git branch ( to see current branch you are in)
+ git checkout R2017.01.0 (to switch the branches)
+ git pull upstream R2017.01.0 ( to get all teh changes form upstream) [it will merge the upstream changes to your local]
+ git log (shows the details of the merge changes)
+ git push origin R2017.01.0 (push the changes to your forked repo branch)
+ -----
+ make changes in your working copy
+ git status (to see what files are modified)
+ git diff pom.xml ( to see what got changed)
+ git add  pom.xml (to stage the file for commit)
+ git commit -m "added missing sections in pom which are added by MALA in svn" (commit your changes to local repo)
+ git push origin R2017.01.0 (push your changes to your forked repo)
+ From your forked repo open a PR to merge your changes to release branch
