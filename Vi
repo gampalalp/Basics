@@ -13,3 +13,6 @@ dG                                        #delete all lines below cursor
 find . -name pom.xml |xargs perl -i -p -e 's/<version>2016.02.0-SNAPSHOT<\/\version>/<version>2016.02.0STM_POC-SNAPSHOT<\/\version>/g;'
 find . -name pom.xml |xargs perl -i -p -e 's/2016.02.2.2/2016.02.2-SNAPSHOT/g;'
 
+Initial pom version changes
+find . -type f -name "pom.xml" | xargs grep -il 2017.02.0-SNAPSHOT | xargs perl -i.bak -pe "s#2017.02.0-SNAPSHOT#2017.02.1-SNAPSHOT#g"
+
