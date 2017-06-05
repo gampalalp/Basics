@@ -47,7 +47,7 @@ tail -100f access.log | awk '{print $8}'
 cat filename | sort -u  #sorts and displays only unique
 fgrep -x -f file1 file2  #displays common thing in both files
 fgrep -v -f file1 file2 #displays the things in file2 which are not there in file1
-/opt/apps/java/jdk170_21/bin/keytool -list -v -keystore “JKS file”
+/opt/apps/java/jdk180_131SV/bin/keytool -list -v -keystore “JKS file”
 
 find . -type f -exec grep  -l tapapp_2015.02.0 {} + [find the file names which has particular word]
 find . -type f | xargs grep -c tapapp_2015.02.0 | grep -v ":0" [find the file names which has particular word]
