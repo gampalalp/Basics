@@ -55,3 +55,5 @@ find . -type f | xargs grep -c tapapp_2015.02.0 | grep -v ":0" [find the file na
 Cron job
 Run on 1st of every month adn deletes anything whic older than 6month
 0 0 1 * * /release/OBP/iebuild/.m2/*repository* -type f -mtime +180 -exec rm -rf {} \; >/dev/null 2>&1
+
+find . -type f -mtime -1 -exec ls -l {} \; [will list all files within last 24 hours, with a long listing just to confirm modification date]
