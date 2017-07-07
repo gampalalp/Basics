@@ -16,3 +16,5 @@ Add ssh key(ssh-keygen -t rsa)
  git commit -m "added missing sections in pom which are added by MALA in svn" (commit your changes to local repo)
  git push origin R2017.01.0 (push your changes to your forked repo)
  From your forked repo open a PR to merge your changes to release branch
+ --
+ git remote set-url origin git@github.wellsfargo.com:u263152/wibsv-mbsa.git [to chnage the remote origin url]
