@@ -18,3 +18,7 @@ Add ssh key(ssh-keygen -t rsa)
  From your forked repo open a PR to merge your changes to release branch
  --
  git remote set-url origin git@github.wellsfargo.com:u263152/wibsv-mbsa.git [to chnage the remote origin url]
+ git clone -b R2017.02.1 git@github.wellsfargo.com:app-digital-channels-group/wibac-accounts[clone a particular branch]
+git rev-list -n 1 2017.03.0/servicing-2017.03.0.157-20170712031848 [to check the commit_id at which a tag is created]
+git tag 2017.03.0/servicing-2017.03.0.151 commit_id [creating tag at a commit id]
+git push --tags
