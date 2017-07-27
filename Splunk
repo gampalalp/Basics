@@ -1,0 +1,11 @@
+As app ID: 
+1. ps -ef | grep splunk (kill these processes) 
+     app 19750 19698   0 04:06:47 ?           0:14 /opt/apps/users/app/splunk/bin/splunkd instrument-resource-usage -p 22513  
+
+     app 19697  8404   0 04:06:39 ?           1:01 splunkd -p 22513 restart 
+     app 19698 19697   0 04:06:39 ?           0:00 splunkd -p 22513 restart 
+2. Remove the Splunk PID files: 
+  /bin/rm /opt/apps/splunk/var/run/splunk/conf-mutator.pid 
+  /bin/rm /opt/apps/splunk/var/run/splunk/splunkd.pid 
+3. Start splunk: 
+  /opt/apps/splunk/bin/splunk start
