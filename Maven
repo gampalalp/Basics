@@ -5,3 +5,12 @@ nohup mvn -Pci -X deploy >& build_`date +%m%d%Y` &
 nohup mvn -Pfortify-analysis -DskipTests=true -Dskip.sonar=true  -X >& build_`date +%m%d%Y` &
 mvn -Pfortify-analysis assembly:single -s /release/OBP/iebuild/.m2/artifactory_settings.xml [to run maven-assembly-plugin]
 mvn versions:update-properties -s /release/OBP/iebuild/.m2/artifactory_settings.xml [to run versions-maven-plugin]
+
+Fortify
+export M2_HOME=/opt/apps/buildtools/apache-maven-3.0.5
+export JAVA_HOME=/opt/apps/buildtools/java/jdk180_141_x64/
+export FORTIFY_HOME=/opt/apps/buildtools/Fortify-360-3.9.0-Analyzers
+export PATH=$JAVA_HOME/bin:$M2_HOME/bin:$FORTIFY_HOME/bin:/opt/apps/buildtools/git-2.7.3/bin:$PATH
+export LD_LIBRARY_PATH=/opt/apps/buildtools/git-2.7.3/lib
+
+nohup mvn -Pfortify-analysis -Dskip.tests=true -Dskip.sonar=true -s /release/OBP/iebuild/.m2/artifactory_settings.xml install  >& build_`date +%m%d%Y` &
