@@ -14,3 +14,5 @@ export PATH=$JAVA_HOME/bin:$M2_HOME/bin:$FORTIFY_HOME/bin:/opt/apps/buildtools/g
 export LD_LIBRARY_PATH=/opt/apps/buildtools/git-2.7.3/lib
 
 nohup mvn -Pfortify-analysis -Dskip.tests=true -Dskip.sonar=true -s /release/OBP/iebuild/.m2/artifactory_settings.xml install  >& build_`date +%m%d%Y` &
+
+mvn versions:set -DnewVersion=2017.03.0.2
