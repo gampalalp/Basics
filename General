@@ -5,6 +5,7 @@ find ip address 	                            /usr/sbin/nslookup "server name"
 
 Linux	
 find ip of the server u logged in	hostname -i or cat /etc/hosts
+find . -type f -exec grep -l enableActivateCreditCardFeature {} \; 
 ------------
 Tarring	
 normal tarring	tar  -cvf output.tar sourefoldername
