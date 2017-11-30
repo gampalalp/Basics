@@ -22,3 +22,4 @@ Add ssh key(ssh-keygen -t rsa)
 git rev-list -n 1 2017.03.0/servicing-2017.03.0.157-20170712031848 [to check the commit_id at which a tag is created]
 git tag 2017.03.0/servicing-2017.03.0.151 commit_id [creating tag at a commit id]
 git push --tags
+git push upstream --delete R2018.01.0 --delete branch from upstream
