@@ -1,3 +1,4 @@
+last -a [to check all the users loged in]
 IP Address:	
 Solaris	
 find ip address of the server u loggedin	    /usr/sbin/ifconfig -a
